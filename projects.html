@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Abhijeet Cherungottil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Abhijeet</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="skills.html" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li class="nav-item"><a href="experience.html" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="education.html" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li class="nav-item"><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li class="nav-item"><a href="licenses.html" class="nav-link">Licenses</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div id="fun-fact"></div>
+            <!-- S.P.A.R Simple Card -->
+            <div class="projects-grid-simple" style="margin-bottom: 3rem;">
+                <div class="project-card-simple">
+                    <img src="images/spar-thumb.jpg" alt="S.P.A.R project thumbnail" class="project-thumb project-thumb-spar">
+                    <h3>S.P.A.R (System Processes and Analysis Reporting)</h3>
+                    <p>Cross-platform app for real-time system monitoring, focused on accessibility and user experience.</p>
+                    <div class="project-links" style="display: flex; gap: 1rem; justify-content: center; margin-top: 0.5rem;">
+                        <a href="project-spar.html" class="btn btn-primary">View Details</a>
+                        <a href="https://github.com/abhijeet1999/MSCS_Spring2025_Capping" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Other Projects in Original Format -->
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Streamlining Gradebook Support for Faculty</h3>
+                        <p>Led a comprehensive initiative to resolve faculty Gradebook configuration issues within the LMS. Identified recurring pain points and created streamlined solutions that resolved 99% of issues in a single interaction, dramatically reducing support requests and improving faculty confidence.</p>
+                        <div class="project-tags">
+                            <span>LMS Support</span>
+                            <span>Faculty Training</span>
+                            <span>Process Optimization</span>
+                        </div>
+                        <div class="project-stats">
+                            <span><i class="fas fa-percentage"></i> 99% resolution rate</span>
+                            <span><i class="fas fa-clock"></i> Single interaction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Accessible Reporting & Visualization Tools</h3>
+                        <p>Built comprehensive Power Apps solutions for accessibility testing workflow in Brightspace LMS. Created dynamic issue tracking forms and interactive visualization dashboards with Power Automate integration for automated PDF report generation and distribution to 500+ faculty.</p>
+                        <div class="project-tags">
+                            <span>Power Apps</span>
+                            <span>Power Automate</span>
+                            <span>WCAG Compliance</span>
+                        </div>
+                        <div class="project-stats">
+                            <span><i class="fas fa-users"></i> 500+ faculty</span>
+                            <span><i class="fas fa-chart-pie"></i> Interactive dashboards</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image project-image-screenshot" onclick="openModal('marist-digital-education-modal')" style="cursor:pointer;">
+                        <img src="images/marist-digital-education.jpg" alt="Screenshot of Marist University Digital Education website designed by Abhijeet Cherungottil" class="project-screenshot-thumb">
+                    </div>
+                    <div class="project-content">
+                        <h3>Digital Education Website – Marist University</h3>
+                        <p>
+                            Led the design and development of the <a href="https://my.de.marist.edu/" target="_blank">Digital Education website</a> for Marist University.<br>
+                            Collaborated with an interdisciplinary team to deliver a modern, accessible, and user-friendly platform for faculty, staff, and students.<br>
+                            Implemented features for Brightspace LMS support, accessibility resources, and faculty development.<br>
+                            Ensured full WCAG compliance, mobile-first design, and seamless navigation.<br>
+                            <strong>Technologies:</strong> Liferay 7, HTML5, CSS3, JavaScript, accessibility best practices.
+                        </p>
+                        <div class="project-tags">
+                            <span>Liferay 7</span>
+                            <span>WCAG 2.1</span>
+                            <span>Mobile-First Design</span>
+                            <span>Accessibility</span>
+                        </div>
+                        <div class="project-stats">
+                            <span><i class="fas fa-file-alt"></i> 150+ pages</span>
+                            <span><i class="fas fa-universal-access"></i> ADA Compliant</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://my.de.marist.edu/" class="btn btn-primary" target="_blank">Visit Live Site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Thermal Imaging & Mask Fit Detection App</h3>
+                        <p>Developed an advanced iOS application integrating thermal imaging with machine learning to analyze mask fit effectiveness. Used FLIR SDK, CoreML, and hybrid UIKit-SwiftUI architecture to deliver real-time health insights with offline data storage.</p>
+                        <div class="project-tags">
+                            <span>iOS Development</span>
+                            <span>CoreML</span>
+                            <span>Thermal Imaging</span>
+                        </div>
+                        <div class="project-stats">
+                            <span><i class="fas fa-mobile-alt"></i> iOS App</span>
+                            <span><i class="fas fa-brain"></i> Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Arabic News & Radio App</h3>
+                        <p>Contributed to redesigning a high-traffic news and radio app for Arabic-speaking users at QBurst. Implemented RTL-compatible UI components, user profile features, and modern design patterns, resulting in improved engagement for 100K+ users in the Middle East.</p>
+                        <div class="project-tags">
+                            <span>iOS Development</span>
+                            <span>RTL Support</span>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <div class="project-stats">
+                            <span><i class="fas fa-download"></i> 100K+ downloads</span>
+                            <span><i class="fas fa-globe-americas"></i> Middle East market</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>BitMedi: Secure Medical Records</h3>
+                        <p>Published research on an application to store medical records efficiently and securely, focusing on secure digital record management in healthcare. Published in Springer ICECMSN proceedings.</p>
+                        <div class="project-tags">
+                            <span>Research</span>
+                            <span>Security</span>
+                            <span>Healthcare</span>
+                        </div>
+                        <div class="project-stats">
+                            <span><i class="fas fa-book"></i> Springer Publication</span>
+                            <span><i class="fas fa-award"></i> ICECMSN Proceedings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Abhijeet Cherungottil. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 

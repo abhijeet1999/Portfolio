@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhijeet Cherungottil - Instructional Technologist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Abhijeet</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="skills.html" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="experience.html" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="education.html" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li class="nav-item"><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li class="nav-item"><a href="licenses.html" class="nav-link">Licenses</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <!-- Landing Hero Section -->
+    <section class="hero landing-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Abhijeet Cherungottil
+                </h1>
+                <p class="hero-description">
+                    Welcome! I design accessible, technology-driven learning experiences for higher education and corporate learning. Explore my portfolio to see my work in instructional design, accessibility, and digital education.
+                </p>
+                <div class="hero-buttons landing-buttons"></div>
+            </div>
+            <!-- Business Card in Hero (right side) -->
+            <div class="hero-business-card">
+                <div id="business-card" class="business-card">
+                    <div class="business-card-photo">
+                        <img src="images/profile.jpg" alt="Professional headshot of Abhijeet Cherungottil" />
+                    </div>
+                    <div class="business-card-info">
+                        <h2>Abhijeet Cherungottil</h2>
+                        <p class="business-card-title">Instructional Designer & Technologist</p>
+                        <p class="business-card-email"><i class="fas fa-envelope"></i> abhijeetcherungottil@gmil.com</p>
+                        <p class="business-card-location"><i class="fas fa-map-marker-alt"></i> NY, USA</p>
+                    </div>
+                    <button id="download-card-btn" class="btn btn-primary" style="margin-top:1.2rem;">Download as Image</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Bloom's Taxonomy Progression Section -->
+    <section class="blooms-taxonomy-section">
+        <div class="container">
+            <h2 class="section-title">Explore My Portfolio by Bloom's Taxonomy</h2>
+            <div class="blooms-cards-wrapper">
+                <div class="blooms-col-left">
+                    <div class="blooms-cards">
+                        <div class="blooms-step create unlocked" id="blooms-create" tabindex="0">
+                            <div class="blooms-level">Create</div>
+                            <div class="blooms-desc">Combining parts to make a new whole</div>
+                        </div>
+                        <div class="blooms-step evaluate unlocked" id="blooms-evaluate" tabindex="0">
+                            <div class="blooms-level">Evaluate</div>
+                            <div class="blooms-desc">Judging the value of information or ideas</div>
+                        </div>
+                        <div class="blooms-step analyze unlocked" id="blooms-analyze" tabindex="0">
+                            <div class="blooms-level">Analyze</div>
+                            <div class="blooms-desc">Breaking down information into component parts</div>
+                        </div>
+                        <div class="blooms-step apply unlocked" id="blooms-apply" tabindex="0">
+                            <div class="blooms-level">Apply</div>
+                            <div class="blooms-desc">Applying the facts, rules, concepts, and ideas</div>
+                        </div>
+                        <div class="blooms-step understand unlocked" id="blooms-understand" tabindex="0">
+                            <div class="blooms-level">Understand</div>
+                            <div class="blooms-desc">Understanding what the facts mean</div>
+                        </div>
+                        <div class="blooms-step remember unlocked" id="blooms-remember" tabindex="0">
+                            <div class="blooms-level">Remember</div>
+                            <div class="blooms-desc">Recognizing and recalling facts</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blooms-col-right">
+                    <div class="blooms-float">
+                        <div class="blooms-sidebar"></div>
+                        <div id="blooms-content" class="blooms-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Bloom's Taxonomy Progression Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Abhijeet Cherungottil. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="html2canvas.min.js"></script>
+    <script>
+    document.getElementById('download-card-btn').addEventListener('click', function() {
+      const card = document.getElementById('business-card');
+      html2canvas(card, {backgroundColor: null, scale: 2}).then(function(canvas) {
+        const link = document.createElement('a');
+        link.download = 'Abhijeet_Business_Card.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      });
+    });
+    </script>
+</body>
+</html> 

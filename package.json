@@ -1,0 +1,30 @@
+{
+  "name": "abhijeet-cherungottil-portfolio",
+  "version": "1.0.0",
+  "description": "Instructional Technologist Portfolio - Leveraging Tech to Elevate Learning Experiences",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "deploy": "./deploy.sh"
+  },
+  "keywords": [
+    "portfolio",
+    "instructional-technology",
+    "lms",
+    "accessibility",
+    "e-learning",
+    "responsive",
+    "github-pages"
+  ],
+  "author": "Abhijeet Cherungottil",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhijeet1999/instructional-technology-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abhijeet1999/instructional-technology-portfolio/issues"
+  },
+  "homepage": "https://abhijeet1999.github.io/instructional-technology-portfolio"
+} 

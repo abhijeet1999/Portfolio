@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Abhijeet Cherungottil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Abhijeet</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                <li class="nav-item"><a href="skills.html" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="experience.html" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="education.html" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li class="nav-item"><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li class="nav-item"><a href="licenses.html" class="nav-link">Licenses</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div id="fun-fact"></div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm an Instructional Designer & Technologist passionate about bridging the gap between technology and education. 
+                        With a strong background in both computer science and instructional design, I specialize in creating 
+                        accessible, user-centered learning experiences that drive measurable results.
+                    </p>
+                    <p>
+                        My expertise spans from LMS quality assurance and accessibility compliance to developing scalable 
+                        applications. I believe in leveraging technology to enhance inclusive learning outcomes and streamline 
+                        educational processes for both faculty and students.
+                    </p>
+                    <p>
+                        I am highly comfortable using LMS tools such as Brightspace, and have extensive experience identifying and helping to fix accessibility issues in Brightspace courses. My work includes auditing and remediating problems such as color contrast, missing or unclear alt text, improper heading structure, inaccessible links, and more—ensuring all course content is inclusive and meets accessibility standards.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>99%</h3>
+                            <p>Gradebook Issue Resolution</p>
+                        </div>
+                        <div class="stat">
+                            <h3>150+</h3>
+                            <p>Web Pages Redesigned</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100K+</h3>
+                            <p>App Downloads</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-card">
+                        <div class="profile-avatar profile-photo">
+                            <img src="images/profile.jpg" alt="Professional headshot of Abhijeet Cherungottil" class="profile-img">
+                        </div>
+                        <h3>Abhijeet Cherungottil</h3>
+                        <p>Instructional Designer & Technologist</p>
+                        <p>Marist University</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Business Card Section -->
+    <section class="business-card-section">
+        <div id="business-card" class="business-card">
+            <div class="business-card-photo">
+                <img src="images/profile.jpg" alt="Professional headshot of Abhijeet Cherungottil" />
+            </div>
+            <div class="business-card-info">
+                <h2>Abhijeet Cherungottil</h2>
+                <p class="business-card-title">Instructional Designer & Technologist</p>
+                <p class="business-card-email"><i class="fas fa-envelope"></i> abhijeet.cherungottil@gmail.com</p>
+                <p class="business-card-location"><i class="fas fa-map-marker-alt"></i> Toronto, Canada</p>
+            </div>
+            <button id="download-card-btn" class="btn btn-primary" style="margin-top:1.2rem;">Download as Image</button>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Abhijeet Cherungottil. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="html2canvas.min.js"></script>
+    <script>
+    document.getElementById('download-card-btn').addEventListener('click', function() {
+      const card = document.getElementById('business-card');
+      html2canvas(card, {backgroundColor: null, scale: 2}).then(function(canvas) {
+        const link = document.createElement('a');
+        link.download = 'Abhijeet_Business_Card.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      });
+    });
+    </script>
+</body>
+</html> 
