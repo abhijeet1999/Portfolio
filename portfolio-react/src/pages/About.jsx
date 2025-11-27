@@ -67,7 +67,7 @@ const About = () => {
           <div className="about-image">
             <div className="profile-card">
               <div className="profile-avatar profile-photo">
-                <img src="/images/profile.jpg" alt="Professional headshot of Abhijeet Cherungottil" className="profile-img" />
+                <img src={`${import.meta.env.BASE_URL}images/profile.jpg`} alt="Professional headshot of Abhijeet Cherungottil" className="profile-img" />
               </div>
               <h3>Abhijeet Cherungottil</h3>
               <p>Instructional Designer & Technologist</p>

@@ -9,7 +9,7 @@ const Projects = () => {
       description: 'Cross-platform application designed to provide real-time system monitoring and reporting for both desktop and iOS platforms. Developed with a strong emphasis on accessibility, ensuring that all users—including those with disabilities—can effectively use the app. My responsibilities included leading the iOS development, implementing accessibility features (VoiceOver, Dynamic Type), and coordinating user testing.',
       tags: ['iOS Development', 'Accessibility', 'Real-time Monitoring', 'SwiftUI', 'Electron', 'React', 'Spring Boot', 'MySQL'],
       icon: 'fas fa-chart-line',
-      thumbnail: '/images/spar-thumb.jpg',
+      thumbnail: `${import.meta.env.BASE_URL}images/spar-thumb.jpg`,
       link: 'https://github.com/abhijeet1999/MSCS_Spring2025_Capping',
       isSpar: true,
       role: 'Lead iOS Developer, Accessibility Lead',
@@ -65,7 +65,7 @@ const Projects = () => {
       description: 'Led the design and development of the Digital Education website for Marist University. Collaborated with an interdisciplinary team to deliver a modern, accessible, and user-friendly platform for faculty, staff, and students. Implemented features for Brightspace LMS support, accessibility resources, and faculty development. Ensured full WCAG compliance, mobile-first design, and seamless navigation. Technologies: Liferay 7, HTML5, CSS3, JavaScript, accessibility best practices.',
       tags: ['Liferay 7', 'WCAG 2.1', 'Mobile-First Design', 'Accessibility'],
       icon: 'fas fa-globe',
-      thumbnail: '/images/marist-digital-education.jpg',
+      thumbnail: `${import.meta.env.BASE_URL}images/marist-digital-education.jpg`,
       link: 'https://my.de.marist.edu/',
       stats: [
         { icon: 'fas fa-file-alt', text: '150+ pages' },

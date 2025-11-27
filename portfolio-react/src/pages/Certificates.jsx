@@ -5,30 +5,31 @@ import './Certificates.css'
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null)
 
+  const baseUrl = import.meta.env.BASE_URL
   const certificates = [
     {
       title: 'Emerging Leaders Program',
-      image: '/certificates/emerging-leader.JPG',
+      image: `${baseUrl}certificates/emerging-leader.JPG`,
       alt: 'Certificate: Marist University Emerging Leaders Program awarded to Abhijeet Cherungottil, April 16, 2025'
     },
     {
       title: 'Student Employee of the Year Nominee',
-      image: '/certificates/employee-of-year.jpg',
+      image: `${baseUrl}certificates/employee-of-year.jpg`,
       alt: 'Certificate: Student Employee of the Year Nominee, Marist University, Abhijeet Cherungottil, April 15, 2025'
     },
     {
       title: 'e-Yantra Robotics Competition (IIT Bombay)',
-      image: '/certificates/eyantra.jpg',
+      image: `${baseUrl}certificates/eyantra.jpg`,
       alt: 'Certificate: e-Yantra Robotics Competition, IIT Bombay, Certificate of Merit for Abhijeet C, March 2019'
     },
     {
       title: 'Cisco thingQbator (Excellence in Innovation)',
-      image: '/certificates/cisco-thingqbator.jpg',
+      image: `${baseUrl}certificates/cisco-thingqbator.jpg`,
       alt: 'Certificate: Cisco thingQbator Excellence in Innovation awarded to Abhijeet C, September 2020'
     },
     {
       title: 'e-Yantra Robotics Competition – Team Photo',
-      image: '/certificates/eyantra-team.jpg',
+      image: `${baseUrl}certificates/eyantra-team.jpg`,
       alt: 'Abhijeet Cherungottil and team receiving e-Yantra Robotics Competition certificate at IIT Bombay'
     }
   ]

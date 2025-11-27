@@ -71,7 +71,7 @@ const FloatingCards = () => {
         whileHover={{ scale: 1.05 }}
       >
         <div className="profile-image-wrapper">
-          <img src="/images/profile.jpg" alt="Abhijeet Cherungottil" onError={(e) => { e.target.src = '/images/pic.jpg' }} />
+          <img src={`${import.meta.env.BASE_URL}images/profile.jpg`} alt="Abhijeet Cherungottil" onError={(e) => { e.target.src = `${import.meta.env.BASE_URL}images/pic.jpg` }} />
         </div>
         <div className="profile-info">
           <h3>Abhijeet Cherungottil</h3>
