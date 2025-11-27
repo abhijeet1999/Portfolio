@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-// import AppSimple from './AppSimple' // Uncomment to test simple version
 import './styles/index.css'
 
 console.log('React is loading...', document.getElementById('root'))

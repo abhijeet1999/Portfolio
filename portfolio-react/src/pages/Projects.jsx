@@ -6,12 +6,39 @@ const Projects = () => {
   const projects = [
     {
       title: 'S.P.A.R (System Processes and Analysis Reporting)',
-      description: 'Cross-platform app for real-time system monitoring, focused on accessibility and user experience.',
-      tags: ['iOS Development', 'Accessibility', 'Real-time Monitoring'],
+      description: 'Cross-platform application designed to provide real-time system monitoring and reporting for both desktop and iOS platforms. Developed with a strong emphasis on accessibility, ensuring that all users—including those with disabilities—can effectively use the app. My responsibilities included leading the iOS development, implementing accessibility features (VoiceOver, Dynamic Type), and coordinating user testing.',
+      tags: ['iOS Development', 'Accessibility', 'Real-time Monitoring', 'SwiftUI', 'Electron', 'React', 'Spring Boot', 'MySQL'],
       icon: 'fas fa-chart-line',
       thumbnail: '/images/spar-thumb.jpg',
       link: 'https://github.com/abhijeet1999/MSCS_Spring2025_Capping',
-      isSpar: true
+      isSpar: true,
+      role: 'Lead iOS Developer, Accessibility Lead',
+      audience: 'University students, IT staff',
+      techStack: 'SwiftUI, Electron, React, Spring Boot, MySQL',
+      process: 'Agile, user testing',
+      features: [
+        'Real-time system metrics and analysis',
+        'Accessible UI with VoiceOver and Dynamic Type support',
+        'Cross-platform: iOS and desktop (Electron)',
+        'Customizable dashboards and reporting',
+        'Secure data storage and user authentication'
+      ],
+      outcomes: [
+        'Improved engagement and inclusivity for all users',
+        'Demonstrated best practices in accessible app design',
+        'Positive feedback from user testing and faculty'
+      ],
+      videos: [
+        {
+          title: 'Full Demo (Desktop + iOS)',
+          url: 'https://www.youtube.com/embed/vnfTZVheJiA?si=WOXc9_-psMl1cjbl'
+        },
+        {
+          title: 'iOS Demo (YouTube Short)',
+          url: 'https://www.youtube.com/embed/_LRdhwF5JxU'
+        }
+      ],
+      gratitude: 'Special thanks to Prof. Anthony Giorgio and Marist University for their support and guidance throughout the project.'
     },
     {
       title: 'Streamlining Gradebook Support for Faculty',
@@ -88,7 +115,7 @@ const Projects = () => {
           Projects
         </motion.h1>
         
-        {/* S.P.A.R Simple Card */}
+        {/* S.P.A.R Detailed Card */}
         <div className="projects-grid-simple" style={{ marginBottom: '3rem' }}>
           {projects.filter(p => p.isSpar).map((project, index) => (
             <motion.div
@@ -102,8 +129,67 @@ const Projects = () => {
               <img src={project.thumbnail} alt="S.P.A.R project thumbnail" className="project-thumb project-thumb-spar" />
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <div className="project-links" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '0.5rem' }}>
-                <a href={project.link} className="btn btn-primary" target="_blank" rel="noopener noreferrer">View Details</a>
+              
+              {project.role && (
+                <div style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#8E8E93' }}>
+                  <p><strong>Role:</strong> {project.role}</p>
+                  <p><strong>Audience:</strong> {project.audience}</p>
+                  <p><strong>Tech Stack:</strong> {project.techStack}</p>
+                  <p><strong>Process:</strong> {project.process}</p>
+                </div>
+              )}
+
+              {project.features && (
+                <div style={{ marginTop: '1rem' }}>
+                  <h4>Key Features:</h4>
+                  <ul style={{ textAlign: 'left', marginLeft: '1.5rem' }}>
+                    {project.features.map((feature, idx) => (
+                      <li key={idx}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {project.videos && (
+                <div style={{ marginTop: '1.5rem' }}>
+                  <h4>Demo Videos:</h4>
+                  {project.videos.map((video, idx) => (
+                    <div key={idx} style={{ marginTop: '1rem' }}>
+                      <p style={{ marginBottom: '0.5rem', fontWeight: 'bold' }}>{video.title}</p>
+                      <iframe
+                        width="100%"
+                        height="315"
+                        src={video.url}
+                        title={video.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        style={{ borderRadius: '8px' }}
+                      ></iframe>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {project.outcomes && (
+                <div style={{ marginTop: '1rem' }}>
+                  <h4>Outcomes:</h4>
+                  <ul style={{ textAlign: 'left', marginLeft: '1.5rem' }}>
+                    {project.outcomes.map((outcome, idx) => (
+                      <li key={idx}>{outcome}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {project.gratitude && (
+                <p style={{ marginTop: '1rem', fontStyle: 'italic', color: '#8E8E93' }}>
+                  {project.gratitude}
+                </p>
+              )}
+
+              <div className="project-links" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '1.5rem' }}>
                 <a href={project.link} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github"></i> GitHub
                 </a>

@@ -1,6 +1,5 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-// import HomeSimple from './pages/HomeSimple' // Uncomment to test simple version
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Skills from './pages/Skills'
