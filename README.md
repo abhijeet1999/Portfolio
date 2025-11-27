@@ -1,234 +1,174 @@
-# Instructional Design Portfolio
+# Abhijeet Cherungottil - Portfolio
 
-A modern, responsive portfolio website designed specifically for instructional designers. This portfolio showcases your skills, projects, and experience in creating engaging learning experiences.
+A modern React portfolio showcasing iOS development and instructional technology expertise.
 
 ## 🚀 Features
 
-- **Modern Design**: Clean, professional layout with smooth animations
-- **Responsive**: Fully responsive design that works on all devices
-- **Interactive**: Smooth scrolling, hover effects, and dynamic content
-- **Professional Sections**: About, Skills, Projects, Experience, and Contact
-- **GitHub Pages Ready**: Easy deployment to GitHub Pages
-- **Customizable**: Easy to personalize with your own content
+- **Modern React + Vite** - Fast, optimized build
+- **Framer Motion** - Smooth, eye-catching animations
+- **Interactive Particle Background** - Dynamic canvas animations
+- **Animated Statistics** - Count-up animations
+- **Floating 3D Cards** - Engaging visual elements
+- **Responsive Design** - Works on all devices
+- **Smooth Navigation** - React Router with hash-based routing for GitHub Pages
+- **GitHub Pages Ready** - Automatic deployment via GitHub Actions
 
 ## 📁 Project Structure
 
 ```
-portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles and responsive design
-├── script.js           # JavaScript for interactivity
-└── README.md           # This file
+Portfolio/
+├── portfolio-react/          # React application
+│   ├── src/
+│   │   ├── components/      # Reusable components
+│   │   ├── pages/           # Page components
+│   │   └── styles/          # CSS files
+│   ├── public/              # Static assets
+│   └── package.json
+├── .github/
+│   └── workflows/
+│       └── deploy.yml       # GitHub Actions deployment
+└── README.md                # This file
 ```
 
 ## 🛠️ Setup Instructions
 
-### 1. Clone or Download
-- Clone this repository to your local machine
-- Or download the files directly
+### Local Development
 
-### 2. Customize Content
-Edit the `index.html` file to personalize your portfolio:
+1. **Navigate to the React app:**
+   ```bash
+   cd portfolio-react
+   ```
 
-#### Personal Information
-- Update your name in the About section
-- Change contact information in the Contact section
-- Update social media links
-- Modify the hero section tagline
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-#### Projects
-- Replace the sample projects with your own work
-- Update project descriptions, statistics, and tags
-- Add links to live demos or case studies
+3. **Start development server:**
+   ```bash
+   npm run dev
+   ```
+   The app will open on `http://localhost:5173`
 
-#### Experience
-- Update your work history
-- Modify job titles, companies, and dates
-- Customize responsibilities and achievements
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
-#### Skills
-- Adjust skill categories to match your expertise
-- Update skill percentages based on your proficiency
-- Add or remove skills as needed
+## 🌐 Deployment to GitHub Pages
 
-### 3. Customize Styling
-Edit `styles.css` to match your brand:
+This portfolio is configured for automatic deployment to GitHub Pages using GitHub Actions.
 
-#### Colors
-- Primary color: `#2563eb` (blue)
-- Secondary color: `#667eea` (purple)
-- Accent color: `#ffd700` (gold)
+### Quick Setup:
 
-#### Fonts
-- Currently using Inter font family
-- Can be changed in the CSS file
+1. **Push your code to GitHub** (already done if you're reading this)
 
-## 🚀 Deploy to GitHub Pages
+2. **Enable GitHub Pages:**
+   - Go to: `https://github.com/abhijeet1999/Portfolio/settings/pages`
+   - Under **"Source"**, select: **"GitHub Actions"** (NOT "Branch")
+   - Save
 
-### Method 1: Using GitHub Desktop
-1. Create a new repository on GitHub
-2. Clone it to your local machine
-3. Copy all portfolio files to the repository folder
-4. Commit and push to GitHub
-5. Go to repository Settings → Pages
-6. Select "Deploy from a branch" → "main" branch
-7. Your portfolio will be available at `https://yourusername.github.io/repository-name`
+3. **Automatic Deployment:**
+   - GitHub Actions will automatically build and deploy
+   - Check: `https://github.com/abhijeet1999/Portfolio/actions`
+   - Your site will be live at: `https://abhijeet1999.github.io/Portfolio/`
 
-### Method 2: Using GitHub CLI
-```bash
-# Initialize git repository
-git init
+### Configuration:
 
-# Add all files
-git add .
+- **Base Path:** `/Portfolio/` (configured in `vite.config.js`)
+- **Router:** HashRouter (for GitHub Pages compatibility)
+- **Port:** 5173 (development), 4173 (preview)
 
-# Commit changes
-git commit -m "Initial portfolio commit"
+For detailed deployment instructions, see: [portfolio-react/GITHUB_PAGES_SETUP.md](portfolio-react/GITHUB_PAGES_SETUP.md)
 
-# Create repository on GitHub (replace with your username and repo name)
-gh repo create your-portfolio --public
+## 📦 Tech Stack
 
-# Push to GitHub
-git push -u origin main
+- **React 18** - UI library
+- **Vite** - Build tool
+- **Framer Motion** - Animation library
+- **React Router** - Navigation (HashRouter for GitHub Pages)
+- **Font Awesome** - Icons
 
-# Enable GitHub Pages
-gh repo edit --enable-pages
+## 📝 Pages
+
+- **Home** - Hero section with animated stats and floating cards
+- **About** - Professional background and statistics
+- **Projects** - Portfolio of work including S.P.A.R, LMS projects, and more
+- **Skills** - Technical and professional skills
+- **Experience** - Work history and achievements
+- **Education** - Academic background
+- **Achievements** - Awards and recognition
+- **Certificates** - Professional certifications
+- **Licenses** - Professional licenses
+- **Contact** - Contact information and social links
+
+## 🎨 Customization
+
+### Update Content:
+
+All content is in React components in `portfolio-react/src/pages/`:
+- Edit page components to update content
+- Images are in `portfolio-react/public/images/`
+- Certificates are in `portfolio-react/public/certificates/`
+
+### Update Styling:
+
+- Global styles: `portfolio-react/src/styles/`
+- Component styles: Co-located with components (e.g., `About.css`)
+
+### Update Base Path:
+
+If your repository name is different, update `portfolio-react/vite.config.js`:
+```javascript
+base: process.env.NODE_ENV === 'production' ? '/YOUR_REPO_NAME/' : '/',
 ```
 
-### Method 3: Manual Upload
-1. Create a new repository on GitHub
-2. Upload all files directly through the GitHub web interface
-3. Go to Settings → Pages
-4. Select source branch and save
+## 🔧 Development
 
-## 🎨 Customization Guide
+### Available Scripts:
 
-### Changing Colors
-In `styles.css`, find and replace these color values:
-```css
-/* Primary blue */
-#2563eb
+- `npm run dev` - Start development server (port 5173)
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build (port 4173)
 
-/* Secondary purple */
-#667eea
+### Project Structure:
 
-/* Accent gold */
-#ffd700
+```
+portfolio-react/
+├── src/
+│   ├── components/      # Navigation, ParticleBackground, etc.
+│   ├── pages/           # All page components
+│   └── styles/          # Global CSS
+├── public/              # Static assets (images, certificates)
+└── vite.config.js      # Vite configuration
 ```
 
-### Adding New Sections
-1. Add HTML structure in `index.html`
-2. Add corresponding CSS in `styles.css`
-3. Add navigation link if needed
-4. Update JavaScript for any interactive features
+## 📧 Contact
 
-### Adding Animations
-The portfolio includes several animations:
-- Fade-in effects on scroll
-- Skill bar animations
-- Counter animations for statistics
-- Parallax effects
-
-### Customizing Projects
-Each project card includes:
-- Project title and description
-- Technology tags
-- Statistics (learners reached, completion rates)
-- Icons for visual appeal
-
-## 📱 Responsive Design
-
-The portfolio is fully responsive and includes:
-- Mobile-first design approach
-- Hamburger menu for mobile navigation
-- Optimized layouts for tablets and phones
-- Touch-friendly interactions
-
-## 🔧 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
-
-## 📝 Content Guidelines
-
-### Writing Your About Section
-- Keep it concise but engaging
-- Highlight your passion for instructional design
-- Mention your key strengths and approach
-- Include relevant statistics if available
-
-### Project Descriptions
-- Focus on learning outcomes and impact
-- Include specific technologies and tools used
-- Mention target audience and context
-- Quantify results when possible
-
-### Skills Section
-- Group skills by category
-- Be honest about proficiency levels
-- Include both technical and soft skills
-- Update regularly as you learn new tools
-
-## 🎯 SEO Optimization
-
-To improve search engine visibility:
-1. Update the `<title>` tag with your name and profession
-2. Add meta descriptions
-3. Use descriptive alt text for images
-4. Include relevant keywords naturally in content
-5. Ensure fast loading times
-
-## 🔗 Social Media Integration
-
-Update the social media links in the contact section:
-- LinkedIn (professional networking)
-- GitHub (if you have coding projects)
-- Twitter/X (professional updates)
-- Behance/Dribbble (design portfolio)
-
-## 📊 Analytics
-
-Consider adding Google Analytics:
-1. Create a Google Analytics account
-2. Get your tracking ID
-3. Add the tracking code to the `<head>` section of `index.html`
-
-## 🚀 Performance Tips
-
-- Optimize images before adding them
-- Minimize CSS and JavaScript files for production
-- Use a CDN for external resources
-- Enable compression on your web server
-
-## 🤝 Contributing
-
-Feel free to fork this project and customize it for your needs. If you make improvements that could benefit others, consider submitting a pull request.
+- **Email:** abhijeetcherungottil@gmail.com
+- **LinkedIn:** [linkedin.com/in/abhijeetcherungottil](https://www.linkedin.com/in/abhijeetcherungottil/)
+- **GitHub:** [github.com/abhijeet1999](https://github.com/abhijeet1999)
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the MIT License.
 
-## 🆘 Support
+## 🆘 Troubleshooting
 
-If you need help customizing or deploying your portfolio:
-1. Check the GitHub Issues section
-2. Review the documentation above
-3. Search for similar questions in the community
+### Images not loading:
+- Ensure images are in `portfolio-react/public/` folder
+- Check that paths use `import.meta.env.BASE_URL`
 
-## 🎉 Showcase Your Work
+### Routes not working:
+- Make sure GitHub Pages source is set to "GitHub Actions"
+- Verify HashRouter is being used (already configured)
 
-Once deployed, your portfolio will showcase:
-- Your instructional design expertise
-- Professional project examples
-- Technical skills and tools
-- Professional experience
-- Contact information for opportunities
+### Build fails:
+- Run `npm install` to ensure dependencies are installed
+- Check for linting errors
 
-Remember to keep your portfolio updated with your latest work and achievements!
+For more help, see: [portfolio-react/DEPLOYMENT_SUMMARY.md](portfolio-react/DEPLOYMENT_SUMMARY.md)
 
 ---
 
-**Happy designing! 🎨** 
+**Live Site:** https://abhijeet1999.github.io/Portfolio/
