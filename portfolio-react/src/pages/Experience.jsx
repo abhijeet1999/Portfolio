@@ -7,6 +7,19 @@ const Experience = () => {
 
   const experiences = [
     {
+      title: 'Data Analyst (Volunteer)',
+      company: 'One Earth One Chance',
+      period: 'Dec 2025 – Present',
+      location: 'United States (Remote)',
+      details: [
+        'Assisted the Instructional Development team with ADA compliance across course sites and instructional technology tools.',
+        'Evaluated training programs/curricula for effectiveness and outcomes, using feedback to drive refinements and improvements.',
+        'Collected survey feedback and analyzed open-ended responses; developed metrics (completion rates, participant feedback) to assess program effectiveness and identify improvement opportunities.',
+        'Managed and updated key systems with data validation/cleansing and user profile administration (e.g., contacts, donations).',
+        'Built KPI dashboards and benchmarks (e.g., cost per tree planted/event/participant) and compared outcomes with peer environmental nonprofits.'
+      ]
+    },
+    {
       title: 'LMS Quality Assurance Tester',
       company: 'Marist University - Digital Education',
       period: 'Sept 2024 – Present',
